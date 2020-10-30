@@ -8,7 +8,7 @@ public class PrimitiveWriteChars {
 
     public void grabarTexto(File file, String cadea) {
         try {
-            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file, true));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
             DataOutputStream dos = new DataOutputStream(bos);
             System.out.println("\nEscribindo no ficheiro: "+file.getName());
             lonxitudeCadea = cadea.length();

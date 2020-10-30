@@ -8,8 +8,7 @@ public class PrimitiveUTFChars {
 
     public void grabarTexto(File file, String cadea) {
         try {
-            file.delete();
-            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file, true));
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
             DataOutputStream dos = new DataOutputStream(bos);
             System.out.println("\nEscribindo no ficheiro: "+file.getName());
             dos.writeUTF(cadea);
