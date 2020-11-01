@@ -19,7 +19,7 @@ public class TextoDelimitado {
     }
 
     public static void cargarDatos(File file) {
-        String thisLine = null;
+        String thisLine;
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
             System.out.println("\nCargando datos do ficheiro: "+file.getName());
@@ -27,6 +27,7 @@ public class TextoDelimitado {
                 String[] datos = thisLine.split("\t");
                 System.out.println(new Product(datos[0], datos[1], Double.parseDouble(datos[2])).toString());
             }
+            br.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
