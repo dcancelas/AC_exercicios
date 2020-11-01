@@ -12,5 +12,6 @@ public class Main {
         Double[] prezo ={3.0,4.0,5.0};
 
         TextoDelimitado.grabarDatos(file, cod, desc, prezo);
+        TextoDelimitado.cargarDatos(file);
     }
 }
